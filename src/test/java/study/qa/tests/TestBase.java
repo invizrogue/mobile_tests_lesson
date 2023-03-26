@@ -7,7 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import study.qa.drivers.BrowserStackMobileDriver;
+import study.qa.drivers.BrowserstackMobileDriver;
 import study.qa.helpers.Attach;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
@@ -17,8 +17,8 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = BrowserStackMobileDriver.class.getName();
-        Configuration.browserSize = null;
+        Configuration.browser = BrowserstackMobileDriver.class.getName();
+        Configuration.browserSize = null; // костыль для конфигурации селенида для мобильной автоматизации
     }
 
     @BeforeEach
