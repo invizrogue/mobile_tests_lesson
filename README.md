@@ -1,4 +1,4 @@
-# Автоматизация тестирования <a href="https://reqres.in" target="_blank"><img src="readme/images/reqres.png" width="100" height="50"></a>
+# Автоматизация тестирования <a href="https://www.browserstack.com/" target="_blank">Browserstack</a>
 
 ## :scroll: Содержание
 - [Технологии и инструменты](#pushpin-технологии-и-инструменты)
