@@ -12,6 +12,9 @@ public interface MobileConfig extends Config {
     @Key("key")
     String getKey();
 
+    @Key("app_url")
+    String getAppUrl();
+
     @Key("device")
     String getDevice();
 
@@ -29,7 +32,4 @@ public interface MobileConfig extends Config {
 
     @Key("remote_url")
     String getRemoteUrl();
-
-    @Key("app_url")
-    String getAppUrl();
 }

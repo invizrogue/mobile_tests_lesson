@@ -19,6 +19,8 @@ public class TestBase {
     static void beforeAll() {
         Configuration.browser = BrowserstackMobileDriver.class.getName();
         Configuration.browserSize = null; // костыль для конфигурации селенида для мобильной автоматизации
+//        Configuration.timeout = 15000;
+//        Configuration.pageLoadTimeout = 15000;
     }
 
     @BeforeEach
@@ -29,6 +31,7 @@ public class TestBase {
 
     @AfterEach
     void afterEach() {
+
         String sessionId = Selenide.sessionId().toString();
 
         Attach.pageSource();
