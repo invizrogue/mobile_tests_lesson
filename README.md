@@ -44,7 +44,7 @@
 - **remote_url** - hub URI
 
 ## :pushpin: Описание параметров для сборки
-- <code>device</code> устройство, для которого запускаются тесты
+- <code>device</code> устройство, для которого запускаются тесты (android или ios)
 
 ## :pushpin: Задача в Jenkins
 <a href="https://jenkins.autotests.cloud/job/C17-dmikhaylov_ru-mobile21/"><img src="readme/screenshots/jenkins.png" alt="Задача в jenkins"></a>
