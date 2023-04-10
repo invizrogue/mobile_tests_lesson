@@ -30,11 +30,11 @@
 <code>gradle clean local -Denv=local</code>
 
 ### Локально на Browserstack
-для android-тестов: <code>gradle clean android -Denv=android</code>
+для android-тестов: <code>gradle clean android -Denv=android</code><br>
 для ios-тестов: <code>gradle clean ios -Denv=ios</code>
 
 ### Удалённо на Browserstack
-для android-тестов: <code>clean android -Denv=android</code>
+для android-тестов: <code>clean android -Denv=android</code><br>
 для ios-тестов: <code>clean ios -Denv=ios</code>
 
 ## :pushpin: Конфигурация тестов
