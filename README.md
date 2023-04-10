@@ -12,6 +12,7 @@
 ## :pushpin: Технологии и инструменты
 <p align="center">
 <a href="https://rest-assured.io/"><img src="readme/images/restassured.png" width="50" height="50" title="IntelliJ Idea" alt="IDEA"/></a>
+<a href="https://appium.io/"><img src="readme/images/appium.svg" width="50" height="50" title="Appium" alt="IDEA"/></a>
 <a href="https://www.jetbrains.com/idea/"><img src="readme/images/IntelliJ_IDEA_Icon.svg" width="50" height="50" title="IntelliJ Idea" alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="readme/images/java.svg" width="50" height="50"  alt="Java"/></a>
 <a href="https://gradle.org/"><img src="readme/images/Gradle.svg" width="50" height="50"  alt="Gradle"/></a>
@@ -22,15 +23,31 @@
 </p>
 
 ## :pushpin: Запуск тестов
-### Локально
+### Локально на реальном устройстве
+<code>gradle clean real -Denv=real</code>
+
+### Локально на эмуляторе
+<code>gradle clean local -Denv=local</code>
+
+### Локально на Browserstack
 для android-тестов: <code>gradle clean android -Denv=android</code>
 для ios-тестов: <code>gradle clean ios -Denv=ios</code>
 
-### Удалённо
+### Удалённо на Browserstack
 для android-тестов: <code>clean android -Denv=android</code>
 для ios-тестов: <code>clean ios -Denv=ios</code>
 
 ## :pushpin: Конфигурация тестов
+### real.properties
+### local.properties
+- **device_name** - название устройства
+- **platform_version** - версия платформы
+- **remote_url** - адрес /wd/hub
+- **app_package** - App Package
+- **app_activity** - App Activity
+- **app_url** - URL с apk файлом
+- **app_path** - путь для сохранения apk локально
+
 ### android.properties
 ### ios.properties
 - **user** - имя пользователя
