@@ -40,7 +40,8 @@ dependencies {
             "io.appium:java-client:8.3.0",
             "org.slf4j:slf4j-simple:$slf4jVersion",
             "org.aeonbits.owner:owner:1.0.12",
-            "org.assertj:assertj-core:$assertJVersion"
+            "org.assertj:assertj-core:$assertJVersion",
+            "commons-io:commons-io:2.11.0"
     )
     testRuntimeOnly (
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
@@ -63,6 +64,18 @@ tasks.withType(Test) {
 
 tasks.withType(JavaCompile) {
     options.encoding = "UTF-8"
+}
+
+task real(type: Test) {
+    useJUnitPlatform {
+        includeTags("real")
+    }
+}
+
+task local(type: Test) {
+    useJUnitPlatform {
+        includeTags("local")
+    }
 }
 
 task android(type: Test) {

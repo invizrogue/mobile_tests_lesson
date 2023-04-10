@@ -1,14 +1,17 @@
 package study.qa.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
+
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
+
 import study.qa.config.MobileConfig;
 
 import javax.annotation.Nonnull;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -40,9 +43,12 @@ public class BrowserstackMobileDriver implements WebDriverProvider {
 
         // Initialise the remote Webdriver using BrowserStack remote URL
         // and desired capabilities defined above
+        return new RemoteWebDriver(getAppiumServerUrl(), mutableCapabilities);
+    }
+
+    public static URL getAppiumServerUrl() {
         try {
-            return new RemoteWebDriver(
-                    new URL(config.getRemoteUrl()), mutableCapabilities);
+            return new URL(config.getRemoteUrl());
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

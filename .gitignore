@@ -1,9 +1,10 @@
 .gradle
 build/
+src/test/resources/apps/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-
+local.properties
 ### IntelliJ IDEA ###
 .idea/
 *.iws
